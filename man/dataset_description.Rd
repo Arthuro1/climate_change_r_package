@@ -48,7 +48,7 @@ and how widespread they are.}
 %%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
-data(Heat waves US)
-## maybe str(Heat waves US) ; plot(Heat waves US) ...
+data(climateset)
+## maybe str(climateset) ; plot(climateset$temperatureData_us) ...
 }
 \keyword{datasets}
