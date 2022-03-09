@@ -1,4 +1,12 @@
-#prior: boolean , TRUE: prior_predictive_check, else Posterior_predictive_check
+#' Check the model and display the results.
+#'
+#' @param feature.names  A list of features.
+#' @param climateset Must be a dataframe.
+#' @param mu A number set per defalt to 0.
+#' @param sigma A number set per default to 1.
+#' @param prior A boolean TRUE means prior_predictive_check is called, else Posterior_predictive_check. Per Default is its value set to TRUE.
+#' @examples
+#' model_check([], 1)
 model_check <- function(feature.names, climateset, mu = 0, sigma = 1, prior = TRUE){
 
   sample.size = 3000

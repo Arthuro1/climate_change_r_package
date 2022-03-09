@@ -16,8 +16,16 @@ library(rstanarm)
 library(bayesplot)
 
 
-#climateset must be a dataframe
-#formula of type formula
+#' Analyse the posterior
+#'
+#' @param formula Must be of type formula.
+#' @param climateset Must be a dataframe.
+#' @param verbose A boolean set per default to FALSE
+#' @param conterfactuals.check A boolean set per default to FALSE
+#' @return The posterior.
+#' @examples
+#' posterior_analysis(1, 1)
+#' posterior_analysis(10, 1)
 posterior_analysis <- function(formula, climateset, verbose = FALSE, conterfactuals.check = FALSE){
 
 
@@ -48,7 +56,13 @@ posterior_analysis <- function(formula, climateset, verbose = FALSE, conterfactu
 }
 
 
-##only to check one to one relationship  A -> B
+#' Checks counterfactuals and plot the results.
+#' Only to check one to one relationship  A -> B.
+#'
+#' @param posterior A number.
+#' @examples
+#' conterfactuals_check(1)
+#' conterfactuals_check(10)
 conterfactuals_check <- function(posterior){
 
   if(!inherits(posterior, "stanreg"))
@@ -70,7 +84,14 @@ conterfactuals_check <- function(posterior){
   plot(regressor_seq, dependent_post_mean, type = "l")
 }
 
-
+#' Make forecast on new data based on the posterior.
+#'
+#' @param posterior A number.
+#' @param new_data Must be a dataframe.
+#' @return The prediction.
+#' @examples
+#' make_forecast(1, 1)
+#' make_forecast(10, 1)
 make_forecast <- function(posterior, new_data){
 
   prediction = predict(posterior, newdata = new_data)
