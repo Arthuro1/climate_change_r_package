@@ -11,7 +11,7 @@ This dataset contains values of temperature, heat waves index, drought severity 
 }
 \usage{data("climateset")}
 \format{
-  A data frame with 0 observations on the following 2 variables.
+  A data frame with the following 5 variables.
   \describe{
     \item{\code{Year}}{The different values are mesured from 1901 to 2020}
     \item{\code{droughtData_us}}{Drought Severity Index
@@ -19,12 +19,11 @@ This dataset contains values of temperature, heat waves index, drought severity 
 The Palmer Drought Severity Index is the most widely used
 index to measure drought severity over time. Positive values mean wetter than
 average, negatives mean drier than average.}
-    \item{\code{co2Data_us}}{Per capita CO₂ emissions
+    \item{\code{co2Data_us}}{Annual Co2 Emissions
 
-Carbon dioxide (CO₂) emissions from the burning of fossil fuels for energy and cement production. Land use change is
-not included.}
+Based on ‘production’ or ‘territorial’ emissions (i.e. emissions from the burning of fossil fuels, or cement production within a country’s borders). It does not consider the emissions of traded goods (consumption-based emissions)}
 
-    \item{\code{temperatureData_us}}{This indicator describes trends in average surface temperature in the Contiguous 48 States of the United States.}
+    \item{\code{temperatureData_us}}{Contiguous U.S Average Temperature}
 
     \item{\code{heatData_us}}{Annual Heat Wave Index in the United States
 
@@ -41,7 +40,7 @@ and how widespread they are.}
 \itemize{
 \item{\href{https://www.epa.gov/climate-indicators/climate-change-indicators-us-and-global-temperature}{U.S. Temperature}}
 \item{\href{https://ourworldindata.org/search?q=drought}{Drought Severity Index}}
-\item{\href{https://ourworldindata.org/co2/country/united-states?country=~USA}{Per capita CO₂ emissions}}
+\item{\href{https://ourworldindata.org/co2/country/united-states?country=~USA}{Annual Co2 Emissions}}
 \item{\href{https://ourworldindata.org/search?q=heat+waves}{Annual Heat Wave Index}}
 }
 }
